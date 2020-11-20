@@ -6,13 +6,13 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/14 17:03:06 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/14 19:37:52 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 16:18:31 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	count_len(int nbr)
+static int	ft_count_len(int nbr)
 {
 	int				count;
 	unsigned int	copy_nbr;
@@ -41,7 +41,7 @@ char		*ft_itoa(int n)
 	char				*str;
 	unsigned int		copy_nbr;
 
-	len = count_len(n);
+	len = ft_count_len(n);
 	if (!(str = (char *)malloc(sizeof(char) * (len + 1))))
 		return (NULL);
 	str[len] = '\0';

@@ -6,13 +6,13 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/17 12:49:23 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/19 17:54:18 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 18:07:08 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		**ft_free(char **arr)
+static char		**ft_free(char **arr)
 {
 	unsigned int	i;
 
@@ -26,10 +26,10 @@ char		**ft_free(char **arr)
 	return (NULL);
 }
 
-static char	*ft_strcpy(char *dest, char const *src, size_t n)
+static char		*ft_strcpy(char *dest, char const *src, size_t n)
 {
-	size_t	i;
-	char	*src1;
+	size_t		i;
+	char		*src1;
 
 	src1 = (char *)src;
 	i = 0;
@@ -42,9 +42,9 @@ static char	*ft_strcpy(char *dest, char const *src, size_t n)
 	return (dest);
 }
 
-static int	count_words(char const *s, char c)
+static int		count_words(char const *s, char c)
 {
-	int		found_words;
+	int			found_words;
 
 	found_words = 0;
 	while (*s != '\0')
@@ -62,9 +62,9 @@ static int	count_words(char const *s, char c)
 	return (found_words);
 }
 
-static char	*add_substr(char const *s, size_t n)
+static char		*add_substr(char const *s, size_t n)
 {
-	char	*str;
+	char		*str;
 
 	str = (char *)malloc(sizeof(char) * (n + 1));
 	if (str == NULL)
@@ -73,12 +73,12 @@ static char	*add_substr(char const *s, size_t n)
 	return (str);
 }
 
-char		**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
-	char	**arr;
-	int		i;
-	int		j;
-	int		g;
+	char		**arr;
+	int			i;
+	int			j;
+	int			g;
 
 	if (!s ||
 	!(arr = (char **)malloc(sizeof(char *) * (count_words(s, c)) + 1)))

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/12 14:25:08 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/17 19:26:34 by schaya           ###   ########.fr       */
+/*   Created: 2020/11/20 16:28:11 by schaya            #+#    #+#             */
+/*   Updated: 2020/11/20 16:58:46 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ void	*ft_calloc(size_t number, size_t size)
 
 	i = 0;
 	total = number * size;
-	p = (char *)malloc(sizeof(char) * (total));
-	if (p == NULL)
-		return (NULL);
+	p = (char *)malloc(number * size);
+	if (p == 0)
+		return (0);
 	while (total--)
 	{
 		p[i] = 0;

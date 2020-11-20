@@ -6,11 +6,11 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 17:45:46 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/09 20:26:17 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 16:13:38 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *memptr, int val, size_t num)
 {

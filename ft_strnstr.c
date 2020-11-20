@@ -6,13 +6,13 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 09:08:40 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/15 19:59:27 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 17:45:58 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_str(char *big, char *little, int len)
+static int	ft_str(const char *big, const char *little, int len)
 {
 	char	*little1;
 	char	*big1;
@@ -31,12 +31,12 @@ static int	ft_str(char *big, char *little, int len)
 			big1++;
 			len--;
 		}
-		if (len <= 0)
+		if (len < 0)
 			return (0);
 		if (flag == 1)
 			return (1);
 	}
-	return(0);
+	return (0);
 }
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
@@ -58,20 +58,3 @@ char		*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-/*
-int main (void)
-{
-   // Массив источник данных
-   unsigned char src[15]="abcdef";
-
-   // Массив приемник данных
-   unsigned char dst[15]="bc";
-   // Копируем данные из массива src в массив dst
-   
-
-   // Вывод массива dst на консоль
-   printf ("dst: %s\n",ft_strnstr(src, dst, 3));
-
-   return 0;
-}
-*/
