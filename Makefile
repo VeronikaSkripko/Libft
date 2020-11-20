@@ -6,7 +6,7 @@
 #    By: schaya <schaya@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/10/31 19:28:42 by schaya            #+#    #+#              #
-#    Updated: 2020/11/20 17:53:25 by schaya           ###   ########.fr        #
+#    Updated: 2020/11/20 20:07:51 by schaya           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,14 +44,21 @@ SRCS = ft_bzero.c\
 	   ft_putstr_fd.c\
 	   ft_putendl_fd.c\
 	   ft_putnbr_fd.c\
+	   
+BONUSSRC = 	ft_lstnew.c\
+	   		ft_lstadd_front.c\
+	   		ft_lstsize.c\
+			ft_lstlast.c\
 
 OBJS = ${SRCS:.c=.o}
+
+BONUSOBJS = ${BONUSSRC:.c=.o}
 
 NAME = libft.a
 
 CC = gcc
 
-CFLAGC = -Wall -Wextra -Werror -I libft.h
+CFLAGS = -Wall -Wextra -Werror -I libft.h
 
 .c.o:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
@@ -62,11 +69,14 @@ $(NAME) : ${OBJS}
 all: ${NAME}
 
 clean:
-		rm -f ${OBJS}
+		rm -f ${OBJS} ${BONUSOBJS}
 
 fclean: clean
 		rm -f ${NAME}
 
 re: fclean all
+
+bonus: ${BONUSOBJS}
+		ar rc ${NAME} ${BONUSOBJS}
 
 .PHONY: all clean fclean re

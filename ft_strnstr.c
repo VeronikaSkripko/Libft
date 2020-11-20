@@ -6,7 +6,7 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/05 09:08:40 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/20 17:45:58 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 19:27:15 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,6 @@ static int	ft_str(const char *big, const char *little, int len)
 
 char		*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	char	*little1;
-	char	*big1;
-	int		flag;
-
 	if (little == big || *little == '\0')
 		return ((char *)big);
 	if (len == 0)

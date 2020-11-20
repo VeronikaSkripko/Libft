@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 04:43:59 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/20 19:32:30 by schaya           ###   ########.fr       */
+/*   Created: 2020/11/20 18:46:11 by schaya            #+#    #+#             */
+/*   Updated: 2020/11/20 18:59:19 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	unsigned char	*dst;
-	unsigned char	*src;
-
-	dst = (unsigned char*)str1;
-	src = (unsigned char*)str2;
-	if (n == 0)
-		return (0);
-	while (--n && *dst == *src)
+	if (lst != NULL)
 	{
-		dst = dst + 1;
-		src = src + 1;
+		if (new != NULL)
+			new->next = *lst;
+		*lst = new;
 	}
-	return (*dst - *src);
 }

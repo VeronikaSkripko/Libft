@@ -6,7 +6,7 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 17:49:36 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/12 15:58:37 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 19:31:39 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 	unsigned int	i;
 
 	i = 0;
-	parr = arr;
+	parr = (unsigned char *)arr;
 	pc = c;
 	while (n-- != 0)
 	{

@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 04:43:59 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/20 19:32:30 by schaya           ###   ########.fr       */
+/*   Created: 2020/11/20 19:15:45 by schaya            #+#    #+#             */
+/*   Updated: 2020/11/20 19:52:51 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t n)
+t_list	*ft_lstlast(t_list *lst)
 {
-	unsigned char	*dst;
-	unsigned char	*src;
-
-	dst = (unsigned char*)str1;
-	src = (unsigned char*)str2;
-	if (n == 0)
-		return (0);
-	while (--n && *dst == *src)
+	if (lst == NULL)
 	{
-		dst = dst + 1;
-		src = src + 1;
+		return (lst);
 	}
-	return (*dst - *src);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+	}
+	return (lst);
 }

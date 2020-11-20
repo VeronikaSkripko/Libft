@@ -6,7 +6,7 @@
 /*   By: schaya <schaya@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 19:01:09 by schaya            #+#    #+#             */
-/*   Updated: 2020/11/12 15:40:45 by schaya           ###   ########.fr       */
+/*   Updated: 2020/11/20 19:26:29 by schaya           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*dest;
-	int				i;
+	size_t			i;
 
 	dest = (unsigned char*)s;
 	i = 0;
